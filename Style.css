@@ -39,13 +39,45 @@ nav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5px;
 }
 nav li{
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 0.9rem;
   cursor: pointer;
   position: relative;
   transition: 0.3s ease;
   padding: 20px 0;
+}
+/* element violet au dessus des titre de la navbar*/
+/* 1: pointons le premier élément*/
+nav li:first-child{
+color: rgb(95, 4, 170);
+}
+
+/*creation du before concernant le first child*/
+nav li:first-child:before{
+content:"";/* espace vide de créé poiur faire le trait*/
+width: 100%;
+height: 5px;
+position: absolute;
+background-color:rgb(95, 4, 170) ;
+transform: translateY(-20px);/* pour remonter la barre violette*/
+}
+nav li:hover:before{
+  content:"";/* espace vide de créé poiur faire le trait*/
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background-color:rgb(95, 4, 170) ;
+  transform: translateY(-20px);/* pour remonter la barre violette*/
+}
+nav li:last-child:before{
+  background: none;
+}
+#language{
+  background: rgb(128,128,128,0.25);
+  border-radius: 50px;
+  padding: 8px 16px;
 }
